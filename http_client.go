@@ -20,7 +20,7 @@ func main() {
 	client := &http.Client{Transport: transport}
 
 	// 构建请求 （配置一个web服务监听127.0.0.1:8080，且与代理服务器在同一台机器上测试）
-	req, _ := http.NewRequest("GET", "http://127.0.0.1:8080/hello", nil)
+	req, _ := http.NewRequest("GET", "https://www.baidu.com", nil)
 	resp, _ := client.Do(req)
 	// 读取响应
 	body, _ := ioutil.ReadAll(resp.Body)
